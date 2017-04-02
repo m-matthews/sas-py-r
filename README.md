@@ -8,7 +8,7 @@ The [Documentation](/doc) folder includes documentation of comparisons between t
 The [Source](/src) folder contains commented programs written in each of the languages to assist in understanding the parallels between each language.
 
 <table>
-  <tr>
+  <tr width="100%">
     <td width="33%" align="left">&nbsp;</td>
     <td width="34%" align="center"><a href="doc/00_TOC.md">Table of Contents</a></td>
     <td width="33%" align="right"><a href="doc/01_Introduction.md">01. Introduction &gt;&gt;</a></td>
