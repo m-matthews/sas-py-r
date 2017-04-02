@@ -1,5 +1,6 @@
 # sas-py-r
-Introduction to [Python](https://www.python.org/) and [R](https://www.r-project.org/) for [SAS](https://www.sas.com/) Developers.
+
+*An introduction to [Python](https://www.python.org/) and [R](https://www.r-project.org/) for [SAS](https://www.sas.com/) Developers.*
 
 This repository has been created to provide an introduction to the Python and R programming languages for SAS developers.
 
