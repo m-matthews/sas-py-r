@@ -19,6 +19,8 @@ types including date and timestamps.
 
 `*` A `FORMAT` can be used to create variables meeting similar specifications to the other languages.
 
+## Arrays
+SAS, Python and R
 
 
 <table width="100%">

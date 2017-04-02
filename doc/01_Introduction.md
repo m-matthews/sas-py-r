@@ -4,11 +4,18 @@
 
 This repository discusses [Python](https://www.python.org/) and [R](https://www.r-project.org/) programming from a [SAS](https://www.sas.com/) developer perspective.
 
-It is not a comprehensive coverage of any of the languages, but can assist in
+The majority of content and code in this repository compare traditional SAS development code using Data Step and Proc Steps, rather than the newer DS2 and Integration Technologies (which can be accessed via any language eg: Java).
+
+It should be noted that this is not a comprehensive coverage of any of the languages, but can assist in
 understanding the corresponding capabilities and functionality.
+
+## Comparison
+
+The following table provides comparisons between the different languages.  Note that the SAS examples are considering the more traditional use of SAS with Data Steps and Proc Steps.
 
 |              | SAS           | Python           | R           |
 | ------------ | ------------- | ---------------- | ----------- |
+| Introduced   | 1976          | 1991             | 1993        |
 | IDE          | Display Manager <br/> Enterprise Guide | Anaconda <br/> Spyder | R Studio |
 | Extension    | *.sas         | *.py             | *.r         |
 | License      | Proprietary   | Open Source      | Open Source |
@@ -31,6 +38,47 @@ There will often be multiple libraries that can provide similar functionality.
 | Matricies       | SAS/IML                      | Core functionality | Core functionality |
 | Statistics      | SAS/STAT                     | Many               | Many               |
 | Web Services    | SAS/Integration Technologies | Many (eg: Flask)   | Many (eg: Shiny)   |
+
+## SAS
+
+Programs can be executed from within the SAS Display Manager, Enterprise Guide or alternatively from the command line:
+
+    ~/sas-py-r/src $ sas -sysin test.sas
+    Hello World!
+    The answer is 42
+
+Note that the above sample is included in this repository's [Source](../src) folder.
+
+## Python
+
+The [Python](https://www.python.org/) language is becoming more popular amongst analysts and data scientists.  Programs can be executed from with an IDE (Integrated Development Environment) such as Spyder, or alternatively from the command line:
+
+    ~/sas-py-r/src $ python test.py
+    Hello World!
+    The answer is 42
+
+Note that the above sample is included in this repository's [Source](../src) folder.
+
+### Python Installation
+
+Python can be installed via many methods; one popular method is with [Anaconda](https://www.continuum.io/downloads).
+
+## R
+
+Programs can be executed from with an IDE (Integrated Development Environment) such as RStudio, or alternatively from the command line:
+
+    ~/sas-py-r/src $ r test.r
+    [1] "Hello World!"
+    [1] "Answer is 42"
+
+Note that the above sample is included in this repository's [Source](../src) folder.
+
+### R Installation
+
+R can be installed via many methods; one popular method is to install it with [RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+
+
 
 <table width="100%">
   <tr>

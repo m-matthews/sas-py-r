@@ -9,3 +9,7 @@ This repository discusses [Python](https://www.python.org/) and [R](https://www.
 [02. Data Types](02_DataTypes.md)
 
 ...
+
+[04. Functions](04_Functions.md)
+
+...
