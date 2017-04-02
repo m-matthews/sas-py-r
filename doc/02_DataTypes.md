@@ -27,6 +27,6 @@ SAS, Python and R
   <tr>
     <td width="33%" align="left"><a href="01_Introduction.md">&lt;&lt;01. Introduction</a></td>
     <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="02_DataTypes.md">02. Data Types &gt;&gt;</a></td>
+    <td width="33%" align="right"><a href="04_Functions.md">04. Functions &gt;&gt;</a></td>
   </tr>
 </table>
