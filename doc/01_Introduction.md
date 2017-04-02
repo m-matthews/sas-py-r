@@ -32,8 +32,8 @@ There will often be multiple libraries that can provide similar functionality.
 | Statistics      | SAS/STAT                     | Many               | Many               |
 | Web Services    | SAS/Integration Technologies | Many (eg: Flask)   | Many (eg: Shiny)   |
 
-<table>
-  <tr width="100%">
+<table width="100%">
+  <tr>
     <td width="33%" align="left">&nbsp;</td>
     <td width="34%" align="center"><a href="doc/00_TOC.md">Table of Contents</a></td>
     <td width="33%" align="right"><a href="doc/02_DataTypes.md">02. Data Types &gt;&gt;</a></td>
