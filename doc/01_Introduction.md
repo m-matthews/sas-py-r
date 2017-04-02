@@ -69,7 +69,7 @@ Programs can be executed from with an IDE (Integrated Development Environment) s
 
     ~/sas-py-r/src $ r test.r
     [1] "Hello World!"
-    [1] "Answer is 42"
+    [1] "The answer is 42"
 
 Note that the above sample is included in this repository's [Source](../src) folder.
 
