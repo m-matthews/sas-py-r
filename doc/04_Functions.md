@@ -99,6 +99,6 @@ The following lists of functions are provided in order by SAS Function name, as 
   <tr>
     <td width="33%" align="left"><a href="02_DataTypes.md">&lt;&lt;02. Data Types</a></td>
     <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"></td>
+    <td width="33%" align="right"<a href="07_ExternalFiles.md">07. External Files&gt;&gt;</a>></td>
   </tr>
 </table>

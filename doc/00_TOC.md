@@ -13,3 +13,9 @@ This repository discusses [Python](https://www.python.org/) and [R](https://www.
 [04. Functions](04_Functions.md)
 
 ...
+
+[07. External Files](07_ExternalFiles.md)
+
+[08. Databases](08_Databases.md)
+
+...
