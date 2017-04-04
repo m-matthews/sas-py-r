@@ -8,6 +8,15 @@ The [Documentation](/doc) folder includes documentation of comparisons between t
 
 The [Source](/src) folder contains commented programs written in each of the languages to assist in understanding the parallels between each language.
 
+## Installation
+
+The documentation and sample programs assume the following software is available to be able to execute the code:
+
+- SAS Version 9.3+
+- Python Version [3+](https://wiki.python.org/moin/Python2orPython3 "Python 2 or Python 3")
+- R Version 3+
+
+
 <table width="100%">
   <tr>
     <td width="33%" align="left">&nbsp;</td>
