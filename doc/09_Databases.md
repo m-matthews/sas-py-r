@@ -14,11 +14,13 @@ requirements of row-by-row inserts).
 
 Both reading and writing performance may be improved by reviewing default buffer and cache sizes.
 
+...
+
 
 <table width="100%">
   <tr>
-    <td width="33%" align="left"><a href="07_ExternalFiles.md">&lt;&lt;07. External Files</a></td>
+    <td width="33%" align="left"><a href="08_ExternalFiles.md">&lt;&lt;08. External Files</a></td>
     <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"></td>
+    <td width="33%" align="right"><a href="10_Internet.md">10. Internet&gt;&gt;</a>></td>
   </tr>
 </table>
