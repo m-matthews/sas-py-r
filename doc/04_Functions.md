@@ -15,18 +15,18 @@ The following lists of functions are provided in order by SAS Function name, as 
 | COMPRESS       | translate()            |                        |                                              |
 | FIND           | var.find()             |                        | Find a substring within a string.            |
 | INDEX          | var.find()             |                        |                                              |
-| INPUT          | int(var) / float(var)  |                        | Convert argument to numeric.                 |
+| INPUT          | int(var) / float(var)  | as.integer / as.numeric | Convert argument to numeric.                |
 | LEFT           | var.lstrip()           |                        | Remove leading whitespace.                   |
 | LENGTH         | len(var)               |                        | Length of the string.                        |
 | LOWCASE        | var.lower()            |                        |                                              |
 | MISSING        | var is None            |                        |                                              |
-| PUT            | str(val)               |                        | Convert argument to string.                  |
+| PUT            | str(val)               | as.character(...)      | Convert argument to string.                  |
 | QUOTE          | '"{}"'.format(var)     |                        | Quote a string.                              |
 | REPEAT         | 'char'*len             |                        | Repeat a char/string to build a new string.  |
 | REVERSE        | var[::-1]              |                        | Reverse the string.                          |
-| SCAN           | var.split()            |                        |                                              |
+| SCAN           | var.split(delim)       | strsplit(val,delim)    | Scan for a word (others produce word lists). |
 | STRIP          | var.strip()            |                        | Remove leading and trailing whitespace.      |
-| SUBSTR         | var[start:len]         |                        |                                              |
+| SUBSTR         | var[start:len]         | substr(val,start,stop) | Substring.                                   |
 | TRANSLATE      | translate()            |                        |                                              |
 | TRANWRD        | var.replace()          |                        | Replace words in a string.                   |
 | TRIM           | var.rstrip()           |                        | Remove trailing whitespace.                  |
@@ -38,14 +38,14 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 
 | SAS Function   | Python                 | R                      | Description                                  |
 | -------------- | ---------------------- | ---------------------- | -------------------------------------------- |
-| ABS            | abs(val)               |                        | Absolute value.                              |
-| CEIL           | math.ceil(val)         |                        | Smallest int >= input.                       |
-| COS            | math.cos(rad)          |                        | The cosine of the supplied angle.            |
-| EXP            | math.exp(val)          |                        |                                              |
-| FLOOR          | math.floor(val)        |                        | Largest int <= input.                        |
+| ABS            | abs(val)               | abs(val)               | Absolute value.                              |
+| CEIL           | math.ceil(val)         | ceiling(val)           | Smallest int >= input.                       |
+| COS            | math.cos(rad)          | cos(rad)               | The cosine of the supplied angle.            |
+| EXP            | math.exp(val)          | exp(val)               |                                              |
+| FLOOR          | math.floor(val)        | floor(val)             | Largest int <= input.                        |
 | INT            | int(val)               |                        | Integer value of input.                      |
-| LOG            | math.log(val)          |                        |                                              |
-| LOG10          | math.log10(val)        |                        |                                              |
+| LOG            | math.log(val)          | log(val)               |                                              |
+| LOG10          | math.log10(val)        | log10(val)             |                                              |
 | MAX            | max(vals)              |                        | Maximum value of inputs.                     |
 | MEAN           | statistics.mean(vals)  |                        | Average value of inputs.                     |
 | MIN            | min(vals)              |                        | Minimum value of inputs.                     |
@@ -56,11 +56,11 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 | RANGE          | max(vals)-min(vals)    |                        | Range of values.                             |
 | RANUNI         | random.random()        |                        | Random number.                               |
 | ROUND          |                        |                        |                                              |
-| SIN            | math.sin(rad)          |                        | The sine of the supplied angle.              |
+| SIN            | math.sin(rad)          | sin(rad)               | The sine of the supplied angle.              |
 | SQRT           | math.sqrt(val)         |                        | The square root of the value.                |
 | STD            | statistics.stdev(vals) |                        | Standard Deviation.                          |
 | SUM            | sum(vals)              |                        | The sum of the values.                       |
-| TAN            | math.tan(rad)          |                        | The tangent of the supplied angle.           |
+| TAN            | math.tan(rad)          | tan(rad)               | The tangent of the supplied angle.           |
 
 Note that Python has additional libraries for mathematical functions depending on the data type (eg: numpy).
 
@@ -70,7 +70,7 @@ Note that Python has additional libraries for mathematical functions depending o
 | -------------- | ---------------------- | ---------------------- | -------------------------------------------- |
 | CONSTANT('PI') | math.pi                | pi                     | Constant pi = 3.141592...                    |
 | CONSTANT('E')  | math.e                 | exp(1)                 | Constant e = 2.718281...                     |
-|                | math.inf               |                        | Infinity.                                    |
+|                | math.inf               | Inf                    | Infinity.                                    |
 | MISSING        | math.nan               |                        | Not a Number.                                |
 
 ### Datetime Functions
