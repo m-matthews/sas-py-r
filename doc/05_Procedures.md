@@ -8,6 +8,14 @@ Following is a list of frequently used SAS procedures, and comparable code that 
 
 ### PROC APPEND
 
+PROC APPEND is used to concatenate two SAS datasets together.  This can also be done with a DATA Step and multiple datasets on a SET statement.
+
+Python:
+
+    # Use concat() for a list of dataframes to append, or append() to add one new.
+    dfnew = pd.concat([df1, df2, ... dfn])
+    dfnew = df1.append(df2)
+
 ### PROC FCMP
 
 ### PROC FREQ
