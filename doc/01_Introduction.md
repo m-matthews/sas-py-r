@@ -77,7 +77,7 @@ Note that the above sample is included in this repository's [Source](../src) fol
 
 R can be installed via many methods; one popular method is to install it with [RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-
+...
 
 
 <table width="100%">

@@ -8,14 +8,18 @@ This repository discusses [Python](https://www.python.org/) and [R](https://www.
 
 [02. Data Types](02_DataTypes.md)
 
-...
+[03. Program Flow](03_ProgramFlow.md)
 
 [04. Functions](04_Functions.md)
 
-...
+[05. Procedures](05_Procedures.md)
 
-[07. External Files](07_ExternalFiles.md)
+[06. Statistics](06_Statistics.md)
 
-[08. Databases](08_Databases.md)
+[07. Graphics](07_Graphics.md)
 
-...
+[08. External Files](08_ExternalFiles.md)
+
+[09. Databases](09_Databases.md)
+
+[10. Internet](10_Internet.md)
