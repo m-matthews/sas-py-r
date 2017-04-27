@@ -6,6 +6,8 @@ SAS Software includes pre-written procedures to perform functions, usually on co
 
 Following is a list of frequently used SAS procedures, and comparable code that could be used in Python and R.
 
+Full example programs are available for each language in the files [05_procedures.sas](../src/05_procedures.sas), [05_procedures.py](../src/05_procedures.py) and [05_procedures.r](../src/05_procedures.r).
+
 ### PROC APPEND
 
 PROC APPEND is used to concatenate two SAS datasets together.  This can also be done with a DATA Step and multiple datasets on a SET statement.
@@ -76,7 +78,31 @@ R:
 
 ### PROC TRANSPOSE
 
-...
+The TRANSPOSE procedure is used to pivot tables.
+
+SAS:
+
+```sas
+    proc transpose data=work.pol_state_make
+                   out=work.transposed(drop=_name_ _label_);
+      by state;
+      id make;
+      var count;
+   run;
+```
+
+Python:
+
+```python
+
+```
+
+R:
+
+```r
+dtpol_state_make <- dtpolicies[,mean(age),list(state,make)]
+dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "make")), state ~ make)
+```
 
 ---
 

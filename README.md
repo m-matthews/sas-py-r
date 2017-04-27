@@ -16,11 +16,8 @@ The documentation and sample programs assume the following software is available
 - Python Version [3+](https://wiki.python.org/moin/Python2orPython3 "Python 2 or Python 3")
 - R Version 3+
 
+---
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left">&nbsp;</td>
-    <td width="34%" align="center"><a href="doc/00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="doc/01_Introduction.md">01. Introduction &gt;&gt;</a></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+| -------------- |:--------------:| -------------- |
+| | [Table of Contents](00_TOC.md) | [01. Introduction &gt;&gt;](doc/01_Introduction.md) |

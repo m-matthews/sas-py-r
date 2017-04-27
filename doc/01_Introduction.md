@@ -83,4 +83,4 @@ R can be installed via many methods; one popular method is to install it with [R
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| | [Table of Contents](00_TOC.md) | [02. Data Types &gt;&gt;](02_DataTypes.md) |
+| [&lt;&lt; README](../README.md) | [Table of Contents](00_TOC.md) | [02. Data Types &gt;&gt;](02_DataTypes.md) |
