@@ -17,7 +17,7 @@ types including date and timestamps.
 | Date           | numeric `*` | date        | date          |                 |
 | Time           | numeric `*` | time        | time          |                 |
 
-`*` A `FORMAT` can be used to create variables meeting similar specifications to the other languages.
+`*` A `FORMAT` can be applied to variables to meet similar specifications to the other languages.
 
 ## Arrays
 SAS, Python and R
