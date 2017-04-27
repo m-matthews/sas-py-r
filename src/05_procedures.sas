@@ -1,6 +1,10 @@
 * Import data produced with 'random.py'. *;
-dfpolicies = pd.read_csv("../data/policies.csv");
-dfclaims = pd.read_csv("../data/claims.csv");
+proc import datafile="../data/policies.csv" out=work.policies
+            dbms=csv replace;
+run;
+proc import datafile="../data/claims.csv" out=work.claims
+            dbms=csv replace;
+run;
 
 * Split data into under 25 and others using WHERE clauses. *;
 data work.pol_empty
@@ -56,9 +60,9 @@ run;
 * Count of non-missing data by Make. *;
 df_freq2 = dfpolicies.groupby(['make'])['make', 'cancel_date'].count()
 
-# -------------------- *;
-# PROC MEANS / SUMMARY *;
-# -------------------- *;
+* -------------------- *;
+* PROC MEANS / SUMMARY *;
+* -------------------- *;
 
 * Average Age by Make. *;
 proc means data=work.policies missing nway mean;
