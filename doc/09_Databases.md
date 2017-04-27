@@ -16,11 +16,8 @@ Both reading and writing performance may be improved by reviewing default buffer
 
 ...
 
+---
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="08_ExternalFiles.md">&lt;&lt;08. External Files</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="10_Internet.md">10. Internet&gt;&gt;</a>></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 08. External Files](08_ExternalFiles.md) | [Table of Contents](00_TOC.md) | [10. Internet &gt;&gt;](10_Internet.md) |

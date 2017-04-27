@@ -33,11 +33,8 @@ SAS/GRAPH procedures are discussed in section [07. Graphics]([07_Graphics.md]).
 
 ...
 
+---
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="04_Functions.md">&lt;&lt;04. Functions</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="06_Statistics.md">06. Statistics&gt;&gt;</a>></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 04. Functions](04_Functions.md) | [Table of Contents](00_TOC.md) | [06. Statistics &gt;&gt;](06_Statistics.md) |

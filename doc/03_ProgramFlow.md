@@ -6,12 +6,8 @@ Traditional [SAS](https://www.sas.com/) programs are comprised of two types of s
 
 ...
 
+---
 
-
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="02_DataTypes.md">&lt;&lt;02. Data Types</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="04_Functions.md">04. Functions&gt;&gt;</a></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 02. Data Types](02_DataTypes.md) | [Table of Contents](00_TOC.md) | [04. Functions &gt;&gt;](04_Functions.md) |

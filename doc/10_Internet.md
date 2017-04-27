@@ -4,11 +4,8 @@
 
 ...
 
+---
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="09_Databases.md">&lt;&lt;09. Databases</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 09. Databases](09_Databases.md) | [Table of Contents](00_TOC.md) |  |

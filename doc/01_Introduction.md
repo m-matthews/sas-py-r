@@ -79,11 +79,8 @@ R can be installed via many methods; one popular method is to install it with [R
 
 ...
 
+---
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left">&nbsp;</td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="02_DataTypes.md">02. Data Types &gt;&gt;</a></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| | [Table of Contents](00_TOC.md) | [02. Data Types &gt;&gt;](02_DataTypes.md) |

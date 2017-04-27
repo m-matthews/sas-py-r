@@ -16,10 +16,8 @@ Python and R also have libraries to be able to read a wide variety of file forma
 
 ...
 
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="07_Graphics.md">&lt;&lt;07. Graphics</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="09_Databases.md">09. Database Tables &gt;&gt;</a></td>
-  </tr>
-</table>
+---
+
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 07. Graphics](07_Graphics.md) | [Table of Contents](00_TOC.md) | [09. Database Tables &gt;&gt;](09_Databases.md) |

@@ -117,12 +117,8 @@ Python and R both include the creation of functions and classes.
 
 ...
 
+---
 
-
-<table width="100%">
-  <tr>
-    <td width="33%" align="left"><a href="03_ProgramFlow.md">&lt;&lt;03. Program Flow</a></td>
-    <td width="34%" align="center"><a href="00_TOC.md">Table of Contents</a></td>
-    <td width="33%" align="right"><a href="05_Procedures.md">05. Procedures&gt;&gt;</a>></td>
-  </tr>
-</table>
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 03. Program Flow](03_ProgramFlow.md) | [Table of Contents](00_TOC.md) | [05. Procedure &gt;&gt;](05_Procedures.md) |
