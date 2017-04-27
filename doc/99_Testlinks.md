@@ -6,9 +6,9 @@ Testing the link format.
 
 ---
 
-| Previous |   | Next     | Python        | R               |
-| -------------- | ----------- | ----------- | ------------- | --------------- |
-| [01. Introduction](01_Introduction.md) | [Table of Contents](00_TOC.md) | [03. Program Flow](03_ProgramFlow.md) |
+| Previous       |                | Next           |
+|:-------------- |:--------------:| --------------:|
+| [&lt;&lt; 01. Introduction](01_Introduction.md) | [Table of Contents](00_TOC.md) | [03. Program Flow &gt;&gt;](03_ProgramFlow.md) |
 
 ---
 
