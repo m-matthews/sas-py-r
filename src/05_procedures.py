@@ -47,6 +47,7 @@ df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
 # ---------
 # PROC SORT
 # ---------
+df_sorted = dfpolicies.sort_values(by=['make', 'age'], ascending=[0, 1])
 
 # --------------
 # PROC TRANSPOSE
