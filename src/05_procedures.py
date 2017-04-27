@@ -37,17 +37,17 @@ df_freq1['cumulative'] = df_freq1.cumsum()
 # Count of non-missing data by Make.
 df_freq2 = dfpolicies.groupby(['make'])['make', 'cancel_date'].count()
 
-# --------------------
-# PROC MEANS / SUMMARY
-# --------------------
-
-# Average Age by Make.
-df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
-
 # ---------
 # PROC SORT
 # ---------
 df_sorted = dfpolicies.sort_values(by=['make', 'age'], ascending=[0, 1])
+
+# --------------------
+# PROC SUMMARY / MEANS
+# --------------------
+
+# Average Age by Make.
+df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
 
 # --------------
 # PROC TRANSPOSE
