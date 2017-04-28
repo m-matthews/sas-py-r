@@ -8,21 +8,21 @@ The following lists of functions are provided in order by SAS Function name, as 
 
 | SAS Function   | Python                    | R                           | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
-| CAT            | `"".join(vars)`           |                             | Add strings together.                        |
-| CATX           | `",".join(vars)`          |                             | Add strings with delimiters.                 |
-| CHAR           | `var[pos:1]`              |                             | Single character from a string.              |
-| COMPBL         | `" ".join(split(var))`    |                             |                                              |
-| COMPRESS       | `translate()`             |                             |                                              |
-| FIND           | `var.find()`              |                             | Find a substring within a string.            |
-| INDEX          | `var.find()`              |                             |                                              |
+| CAT            | `"".join(vars)`           | 'paste(vars, collapse='')`  | Add strings together.                        |
+| CATX           | `",".join(vars)`          | 'paste(vars, collapse=',')` | Add strings with delimiters.                 |
+| CHAR           | `var[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
+| COMPBL         | `" ".join(split(var))`    | `gsub("\\s+", " ", var)`    | Remove multiple spaces from a string.        |
+| COMPRESS       | `translate()`             | `gsub(" ", "", var)`        | Remove characters from a string.             |
+| FIND           | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
+| INDEX          | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
 | INPUT          | `int(var)` / `float(var)` | `as.integer` / `as.numeric` | Convert argument to numeric.                 |
 | LEFT           | `var.lstrip()`            | `trimws(val, 'left')`       | Remove leading whitespace.                   |
 | LENGTH         | `len(var)`                | `nchar(var)`                | Length of the string.                        |
-| LOWCASE        | `var.lower()`             | `tolower()`                 |                                              |
-| MISSING        | `var is None`             |                             |                                              |
+| LOWCASE        | `var.lower()`             | `tolower()`                 | Lower case version of a string.              |
+| MISSING        | `var is None or var==''`  | `var == ''`                 | Is a string missing / empty.                 |
 | PUT            | `str(val)`                | `as.character(...)`         | Convert argument to string.                  |
-| QUOTE          | `'"{}"'.format(var)`      |                             | Quote a string.                              |
-| REPEAT         | `'char'*len`              |                             | Repeat a char/string to build a new string.  |
+| QUOTE          | `'"{}"'.format(var)`      | `paste('"', var, '"')`      | Quote a string.                              |
+| REPEAT         | `'c'*n`                   | `paste(rep('c', n), collapse='')` | Repeat a char/string to build a new string. |
 | REVERSE        | `var[::-1]`               | `paste(rev(strsplit(val, NULL)[[1]]), collapse='')` | Reverse the string.  |
 | SCAN           | `var.split(delim)`        | `strsplit(val,delim)`       | Scan for a word (others produce word lists). |
 | STRIP          | `var.strip()`             | `trimws(val, 'both')`       | Remove leading and trailing whitespace.      |
@@ -41,18 +41,18 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 | ABS            | `abs(val)`                | `abs(val)`                  | Absolute value.                              |
 | CEIL           | `math.ceil(val)`          | `ceiling(val)`              | Smallest int >= input.                       |
 | COS            | `math.cos(rad)`           | `cos(rad)`                  | The cosine of the supplied angle.            |
-| EXP            | `math.exp(val)`           | `exp(val)`                  |                                              |
+| EXP            | `math.exp(val)`           | `exp(val)`                  | Natural exponential.                         |
 | FLOOR          | `math.floor(val)`         | `floor(val)`                | Largest int <= input.                        |
 | INT            | `int(val)`                | `as.integer(val)`           | Integer value of input.                      |
-| LOG            | `math.log(val)`           | `log(val)`                  |                                              |
-| LOG10          | `math.log10(val)`         | `log10(val)`                |                                              |
+| LOG            | `math.log(val)`           | `log(val)`                  | Natural logarithm.                           |
+| LOG10          | `math.log10(val)`         | `log10(val)`                | Base 10 logarithm.                           |
 | MAX            | `max(vals)`               | `max(vals)`                 | Maximum value of inputs.                     |
 | MEAN           | `statistics.mean(vals)`   | `mean(vals)`                | Average value of inputs.                     |
 | MIN            | `min(vals)`               | `min(vals)`                 | Minimum value of inputs.                     |
-| MISSING        |                           |                             |                                              |
+| MISSING        | `var in None or math.isnan(var)` | `is.nan(var)`        | Is the value mising / not a number.          |
 | MOD            | `val1 % val2`             | `val1 %% val2`              | Modulo.                                      |
-| N              |                           |                             |                                              |
-| NMISS          |                           |                             |                                              |
+| N              |                           |                             | Number of non-missing values in a list.      |
+| NMISS          |                           |                             | Number of missing values in a list.          |
 | RANGE          | `max(vals)-min(vals)`     | `range(vals)`               | Range of values.                             |
 | RANUNI         | `random.random()`         | `runif()`                   | Random number.                               |
 | ROUND          | `round(val, digits)`      | `round(val, digits)`        | Round a number.                              |
