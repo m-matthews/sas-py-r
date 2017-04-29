@@ -1,6 +1,6 @@
 # Python and R for SAS Developers
 
-## Internet Access
+## Graphics
 
 ...
 
@@ -8,4 +8,4 @@
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 09. Databases](09_Databases.md) | [Table of Contents](00_TOC.md) |  |
+| [&lt;&lt; 07. Statistics](07_Statistics.md) | [Table of Contents](00_TOC.md) | [09. External Files &gt;&gt;](09_ExternalFiles.md) |

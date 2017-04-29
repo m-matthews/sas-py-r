@@ -20,4 +20,4 @@ Python and R also have libraries to be able to read a wide variety of file forma
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 07. Graphics](07_Graphics.md) | [Table of Contents](00_TOC.md) | [09. Database Tables &gt;&gt;](09_Databases.md) |
+| [&lt;&lt; 08. Graphics](08_Graphics.md) | [Table of Contents](00_TOC.md) | [10. Database Tables &gt;&gt;](10_Databases.md) |

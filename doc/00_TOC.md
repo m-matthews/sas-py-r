@@ -10,16 +10,18 @@ This repository discusses [Python](https://www.python.org/) and [R](https://www.
 
 [03. Program Flow](03_ProgramFlow.md)
 
-[04. Functions](04_Functions.md)
+[04. Subsetting and Combining Data](04_SubsetCombine.md)
 
-[05. Procedures](05_Procedures.md)
+[05. Functions](05_Functions.md)
 
-[06. Statistics](06_Statistics.md)
+[06. Procedures](06_Procedures.md)
 
-[07. Graphics](07_Graphics.md)
+[07. Statistics](07_Statistics.md)
 
-[08. External Files](08_ExternalFiles.md)
+[08. Graphics](08_Graphics.md)
 
-[09. Databases](09_Databases.md)
+[09. External Files](09_ExternalFiles.md)
 
-[10. Internet](10_Internet.md)
+[10. Databases](10_Databases.md)
+
+[11. Internet](11_Internet.md)

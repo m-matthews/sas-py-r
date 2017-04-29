@@ -136,4 +136,4 @@ Python and R both include the creation of functions and classes.
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 03. Program Flow](03_ProgramFlow.md) | [Table of Contents](00_TOC.md) | [05. Procedures &gt;&gt;](05_Procedures.md) |
+| [&lt;&lt; 04. Subsetting and Combining Data](04_SubsetCombine.md) | [Table of Contents](00_TOC.md) | [06. Procedures &gt;&gt;](06_Procedures.md) |

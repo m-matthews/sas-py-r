@@ -10,4 +10,4 @@ Traditional [SAS](https://www.sas.com/) programs are comprised of two types of s
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 02. Data Types](02_DataTypes.md) | [Table of Contents](00_TOC.md) | [04. Functions &gt;&gt;](04_Functions.md) |
+| [&lt;&lt; 02. Data Types](02_DataTypes.md) | [Table of Contents](00_TOC.md) | [04. Subsetting and Combining Data &gt;&gt;](04_SubsetCombine.md) |

@@ -108,4 +108,4 @@ dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "ma
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 04. Functions](04_Functions.md) | [Table of Contents](00_TOC.md) | [06. Statistics &gt;&gt;](06_Statistics.md) |
+| [&lt;&lt; 05. Functions](05_Functions.md) | [Table of Contents](00_TOC.md) | [07. Statistics &gt;&gt;](07_Statistics.md) |
