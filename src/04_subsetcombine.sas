@@ -10,7 +10,7 @@ run;
 * Subsetting rows (WHERE) *;
 * ----------------------- *;
 
-* Method 1 - with a single read OUTPUT to two data sets.
+* Method 1 - with a single read OUTPUT to two data sets. *;
 
 data work.polunder25
      work.pol25plus;
@@ -19,7 +19,7 @@ data work.polunder25
   else output work.pol25plus;
 run;
 
-* Method 2 - use WHERE clauses.
+* Method 2 - use WHERE clauses. *;
 
 data work.polunder25;
   set work.policies;
@@ -43,13 +43,13 @@ run;
 * Appending data (SET / PROC APPEND) *;
 * ---------------------------------- *;
 
-* Method 1 - use a DATA STEP SET statement.
+* Method 1 - use a DATA STEP SET statement. *;
 
 data work.combined;
   set work.polunder25 work.pol25plus;
 run;
 
-* Method 2 - use PROC APPEND.
+* Method 2 - use PROC APPEND. *;
 
 data work.combined;
   set work.policies(obs=0);
