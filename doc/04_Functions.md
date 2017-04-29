@@ -27,7 +27,7 @@ The following lists of functions are provided in order by SAS Function name, as 
 | SCAN           | `var.split(delim)`        | `strsplit(val,delim)`       | Scan for a word (others produce word lists). |
 | STRIP          | `var.strip()`             | `trimws(val, 'both')`       | Remove leading and trailing whitespace.      |
 | SUBSTR         | `var[start:len]`          | `substr(val,start,stop)`    | Substring.                                   |
-| TRANSLATE      | `translate()`             | `gsub()`                    | Replace text in a string.                    |
+| TRANSLATE      | `var.replace()`           | `gsub()`                    | Replace text in a string.                    |
 | TRANWRD        | `var.replace()`           | `gsub()`                    | Replace words in a string.                   |
 | TRIM           | `var.rstrip()`            | `trimws(val, 'right')`      | Remove trailing whitespace.                  |
 | UPCASE         | `var.upper()`             | `toupper()`                 | Upper case value of string.                  |
@@ -68,8 +68,8 @@ Note that Python has additional libraries for mathematical functions depending o
 
 | SAS Function   | Python                    | R                           | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
-| CONSTANT('PI') | `math.pi`                 | `pi`                        | Constant pi = 3.141592...                    |
 | CONSTANT('E')  | `math.e`                  | `exp(1)`                    | Constant e = 2.718281...                     |
+| CONSTANT('PI') | `math.pi`                 | `pi`                        | Constant pi = 3.141592...                    |
 |                | `math.inf`                | `Inf`                       | Infinity.                                    |
 | MISSING        | `math.nan`                | `NaN`                       | Not a Number.                                |
 
@@ -79,31 +79,37 @@ SAS uses numerics to store date types, and has formats to include DATE, DATETIME
 
 Python includes [date, time, datetime and timedelta](https://docs.python.org/3/library/datetime.html) data types.  The examples in the following table will be using the appropriate data type to produce the same result as SAS.
 
-| SAS Function   | Python                    | R                           | Description                                  |
+
+| SAS Function   | Python                    | R (lubridate)               | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
 | DATE           | `date.today()`            | `Sys.Date()`                | Current date.                                |
-| DATEPART       | `datetime.date()`         |                             | Date component of datetime.                  |
-| DATETIME       | `datetime.now()`          | `date()`                    | Current datetime.                            |
-| DAY            | `date(time).day`          |                             | Day of Month.                                |
-| HOUR           | `(date)time.hour`         |                             |                                              |
+| DATEPART       | `datetime.date()`         | `date(val)`                 | Date component of datetime.                  |
+| DATETIME       | `datetime.now()`          | `Sys.time()`                | Current datetime.                            |
+| DAY            | `date(time).day`          | `day(val)`                  | Day of Month.                                |
+| HOUR           | `(date)time.hour`         | `hour(val)`                 | Hour of (date)time.                          |
 | INPUT          | `datetime.strptime()`     | `as.Date(val)`              | Convert string to Date.                      |
-| INTCK          |                           |                             | Count of interval differences between dates. |
+| INTCK          |                           | `difftime()`                | Count of interval differences between dates. |
 | INTNX          |                           |                             | Increment a date by a count of intervals.    |
-| MINUTE         | `(date)time.minute`       |                             |                                              |
-| MONTH          | `date(time).month`        |                             |                                              |
-| PUT            | `date(time).strftime()`   |                             | Convert to a string.                         |
-| QTR            | `date(time).month//4+1`   |                             | Quarter of the year.                         |
-| SECOND         | `(date)time.second`       |                             |                                              |
+| MINUTE         | `(date)time.minute`       | `minute(val)`               | Minute of (date)time.                        |
+| MONTH          | `date(time).month`        | `month(val)`                | Month of a given date.                       |
+| PUT            | `date(time).strftime()`   | `format(val, "%d%b%Y")`     | Convert to a string.                         |
+| QTR            | `date(time).month//4+1`   | `quarters(val)`             | Quarter of the year.                         |
+| SECOND         | `(date)time.second`       | `second(val)`               | Second of (date)time.                        |
 | TIME           | `time(datetime.now())`    |                             | Current time.                                |
 | TIMEPART       | `datetime.time()`         |                             | Time component of datetime.                  |
 | TODAY          | `date.today()`            | `Sys.Date()`                | Current date.                                |
-| WEEK           |                           |                             |                                              |
-| WEEKDAY        | `date(time).weekday()`    |                             | Day of week (different basis by language).   |
-| YEAR           | `date(time).year`         |                             | Year of the date.                            |
+| WEEK           |                           | `week(val)`                 | Week of the year.                            |
+| WEEKDAY        | `date(time).weekday()`    | `weekdays(val)`             | Day of week (different basis by language).   |
+| YEAR           | `date(time).year`         | `year(val)`                 | Year of the date.                            |
 | YRDIF          |                           |                             |                                              |
 
 * Python functions marked `date(time)` indicate they work with both `date` and `datetime` data types.
 * Python functions marked `(date)time` indicate they work with both `datetime` and `time` data types.
+* R examples above require the `library(lubridate)`.
+* R supports dates in the `seq` function which can produce useful sequences, such as the following examples:
+  * seq(as.Date('2017-06-01'),by='days',length=30)
+  * seq(as.Date('2017-01-01'),to=as.Date('2017-01-01'),by='2 weeks')
+
 
 ### Miscellaneous Functions
 
