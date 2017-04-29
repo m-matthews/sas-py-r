@@ -49,7 +49,7 @@ dtpolicies <- dtpolicies[order(state, age)]
 # --------------------
 
 dtpolicies[,mean(age),make]
-describeBy(dtpolicies, group='make')
+describeBy(dtpolicies, group="make")
 
 # --------------
 # PROC TRANSPOSE
