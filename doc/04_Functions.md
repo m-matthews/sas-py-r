@@ -8,8 +8,8 @@ The following lists of functions are provided in order by SAS Function name, as 
 
 | SAS Function   | Python                    | R                           | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
-| CAT            | `"".join(vars)`           | 'paste(vars, collapse='')`  | Add strings together.                        |
-| CATX           | `",".join(vars)`          | 'paste(vars, collapse=',')` | Add strings with delimiters.                 |
+| CAT            | `"".join(vars)`           | `paste(vars, collapse='')`  | Add strings together.                        |
+| CATX           | `",".join(vars)`          | `paste(vars, collapse=',')` | Add strings with delimiters.                 |
 | CHAR           | `var[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
 | COMPBL         | `" ".join(split(var))`    | `gsub("\\s+", " ", var)`    | Remove multiple spaces from a string.        |
 | COMPRESS       | `translate()`             | `gsub(" ", "", var)`        | Remove characters from a string.             |
