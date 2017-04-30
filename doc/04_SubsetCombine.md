@@ -20,6 +20,8 @@ R:
 library(data.table)
 ```
 
+Full example programs are available for each language in the files [04_subsetcombine.sas](../src/04_subsetcombine.sas), [04_subsetcombine.py](../src/04_subsetcombine.py) and [04_subsetcombine.r](../src/04_subsetcombine.r).
+
 ### Subsetting rows (WHERE)
 
 
@@ -36,14 +38,11 @@ library(data.table)
 
 ### References - Pandas DataFrame
 
-*
+* [http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
 
 ### References - R data.table
 
 * [https://github.com/Rdatatable/data.table/wiki/Getting-started](https://github.com/Rdatatable/data.table/wiki/Getting-started)
-
-
-
 
 ---
 

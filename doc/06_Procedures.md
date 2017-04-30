@@ -6,7 +6,7 @@ SAS Software includes pre-written procedures to perform functions, usually on co
 
 Following is a list of frequently used SAS procedures, and comparable code that could be used in Python and R.
 
-Full example programs are available for each language in the files [05_procedures.sas](../src/05_procedures.sas), [05_procedures.py](../src/05_procedures.py) and [05_procedures.r](../src/05_procedures.r).
+Full example programs are available for each language in the files [06_procedures.sas](../src/06_procedures.sas), [06_procedures.py](../src/06_procedures.py) and [06_procedures.r](../src/06_procedures.r).
 
 ### PROC APPEND
 

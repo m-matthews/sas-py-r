@@ -4,6 +4,8 @@
 
 The following lists of functions are provided in order by SAS Function name, as this document is designed with that perspective.
 
+Full example programs are available for each language in the files [05_functions.sas](../src/05_functions.sas), [05_functions.py](../src/05_functions.py) and [05_functions.r](../src/05_functions.r).
+
 ### String Functions
 
 | SAS Function   | Python                    | R                           | Description                                  |
