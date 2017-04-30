@@ -24,17 +24,73 @@ Full example programs are available for each language in the files [04_subsetcom
 
 ### Subsetting rows (WHERE)
 
+The following example programs subset the `policies` data into new tables `polunder25` (rows where age &lt; 25) and `pol25plus` (rows where age &gt;= 25).
+
+Python:
+
+```python
+polunder25 <- policies[age<25]
+pol25plus <- policies[age>=25]
+```
+
+R:
+
+```r
+polunder25 = policies[policies["age"]<25]
+pol25plus = policies[policies["age"]>=25]
+```
 
 ### Subsetting columns (KEEP)
 
+The following example programs subset the `policies` data keeping all rows, however subsetting the number of columns to include only `policy` and `state`.  The second example in each case renames the column `policy` to `policy_number`.
+
+Python:
+
+```python
+polstate = policies.loc[:,("policy","state")]
+polstate_rename = policies.loc[:,("policy","state")].rename(columns={"policy": "policy_number"})
+```
+
+R:
+
+```r
+polstate <- policies[, .(policy, state)]
+polstate_rename <- policies[, .(policy_number=policy, state)]
+```
 
 ### Appending data (SET / PROC APPEND)
 
+Appending two tables is performed in the following examples, where the two subsets of the original `policies` table are re-joined to create a table with the same contents as the original (although the table row order will be different).
+
+Python:
+
+```python
+combined = pd.concat([polunder25, pol25plus])
+```
+
+R:
+
+```r
+combined <- rbind(polunder25, pol25plus)
+```
 
 ### Merging data (MERGE)
 
+There are many methods of merging data.  The following two examples include an inner join and a left join.  Reading the documentation on the `merge` options will include details on how to produce other join styles.
 
+Python:
 
+```python
+merged = policies.merge(claims)
+merged_left = policies.merge(claims, how="left")
+```
+
+R:
+
+```r
+merged <- merge(policies, claims, by="policy")
+merged_left <- merge(policies, claims, by="policy", all.x=TRUE)
+```
 
 ### References - Pandas DataFrame
 
