@@ -6,6 +6,7 @@ The following lists of functions are provided in order by SAS Function name, as 
 
 Full example programs are available for each language in the files [05_functions.sas](../src/05_functions.sas), [05_functions.py](../src/05_functions.py) and [05_functions.r](../src/05_functions.r).
 
+
 ### String Functions
 
 | SAS Function   | Python                    | R                           | Description                                  |
@@ -66,6 +67,7 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 
 Note that Python has additional libraries for mathematical functions depending on the data type (eg: numpy).
 
+
 ### Mathematical Constants
 
 | SAS Function   | Python                    | R                           | Description                                  |
@@ -74,6 +76,7 @@ Note that Python has additional libraries for mathematical functions depending o
 | CONSTANT('PI') | `math.pi`                 | `pi`                        | Constant pi = 3.141592...                    |
 |                | `math.inf`                | `Inf`                       | Infinity.                                    |
 | MISSING        | `math.nan`                | `NaN`                       | Not a Number.                                |
+
 
 ### Datetime Functions
 
@@ -125,6 +128,8 @@ Python includes [date, time, datetime and timedelta](https://docs.python.org/3/l
 | HTMLENCODE     | `html.escape(str)`        |                             | Escape HTML characters.                      |
 | URLDECODE      | `urllib.parse.unquote()`  |                             | Remove escape sequence from escaped URL.     |
 | URLENCODE      | `urllib.parse.quote()`    |                             | Escape URL characters.                       |
+| VTYPE          | `type()`                  | `class()`                   | Variable (object) type.                      |
+
 
 ### User Defined Functions
 
