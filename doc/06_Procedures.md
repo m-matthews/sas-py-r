@@ -8,6 +8,7 @@ Following is a list of frequently used SAS procedures, and comparable code that 
 
 Full example programs are available for each language in the files [06_procedures.sas](../src/06_procedures.sas), [06_procedures.py](../src/06_procedures.py) and [06_procedures.r](../src/06_procedures.r).
 
+
 ### PROC APPEND
 
 PROC APPEND is used to concatenate two SAS datasets together.  This can also be done with a DATA Step and multiple datasets on a SET statement.
@@ -26,10 +27,71 @@ R:
     dtnew <- rbind(dt1, dt2)
 ```
 
+
+### PROC CONTENTS
+
+PROC CONTENTS enables examination of existing SAS data sets.  The following examples show how to reproduce some of that functionality in Python and R.
+
+Note that the Spyder and RStudio IDEs have a listing of current data in the environment, and the data can be explored there interactively.
+
+Python:
+
+```python
+    # List column names
+    list(df1.columns.values)
+```
+
+R:
+```r
+    # List column names
+    colnames(df1)
+```
+
+
+### PROC DATASETS
+
+PROC DATASETS performs a number of functions on existing SAS data sets.  The following examples show how to reproduce some of that functionality in Python and R.
+
+Note that the Spyder and RStudio IDEs have a listing of current data in the environment, and the data can be explored there interactively.
+
+Python:
+
+```python
+    # Remove an object
+    del mytable
+    # List of Pandas DataFrames
+    dfs = [k for (k, v) in locals().items() if type(v) == pd.DataFrame]
+```
+
+R:
+```r
+    # Remove an object
+    rm(mytable)
+    # List all objects
+    ls()
+```
+
+
 ### PROC FCMP
 
-### PROC FREQ
+Python and R support the creation of custom functions as part of their base functionality.
 
+Python:
+
+```python
+    def mysum(val1, val2):
+        return val1 + val2
+```
+
+R:
+```r
+    mysum <- function(val1, val2) {
+      return(val1 + val2)
+    }
+```
+
+
+### PROC FREQ
 
 Python:
 
@@ -43,8 +105,10 @@ R:
     dt[,.N,classvar]
 ```
 
+
 ### PROC G*
-SAS/GRAPH procedures are discussed in section [07. Graphics]([07_Graphics.md]).
+SAS/GRAPH procedures are discussed in section [08. Graphics](08_Graphics.md).
+
 
 ### PROC SORT
 
@@ -62,6 +126,7 @@ R:
     dtsorted <- dtpolicies[order(make, age)]
 ```
 
+
 ### PROC SUMMARY / MEANS
 
 Python:
@@ -76,9 +141,10 @@ R:
     dtsummary1 <- dtpolicies[,mean(age),make]
 ```
 
+
 ### PROC TRANSPOSE
 
-The TRANSPOSE procedure is used to pivot tables.
+The SAS TRANSPOSE procedure is used to pivot tables.
 
 SAS:
 
@@ -100,8 +166,8 @@ Python:
 R:
 
 ```r
-dtpol_state_make <- dtpolicies[,mean(age),list(state,make)]
-dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "make")), state ~ make)
+    dtpol_state_make <- dtpolicies[,mean(age),list(state,make)]
+    dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "make")), state ~ make)
 ```
 
 ---

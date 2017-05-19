@@ -26,6 +26,11 @@ df_appended2 = df_under25.append(df_25plus)
 # PROC FCMP
 # ---------
 
+def mysum(val1, val2):
+    return val1 + val2
+
+print(mysum(18, 24))
+
 # ---------
 # PROC FREQ
 # ---------
