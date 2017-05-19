@@ -13,7 +13,7 @@ Full example programs are available for each language in the files [05_functions
 | CAT            | `"".join(vars)`           | `paste(vars, collapse='')`  | Add strings together.                        |
 | CATX           | `",".join(vars)`          | `paste(vars, collapse=',')` | Add strings with delimiters.                 |
 | CHAR           | `var[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
-| COMPBL         | `" ".join(split(var))`    | `gsub("\\s+", " ", var)`    | Remove multiple spaces from a string.        |
+| COMPBL         | `" ".join(var.split())`   | `gsub("\\s+", " ", var)`    | Remove multiple spaces from a string.        |
 | COMPRESS       | `translate()`             | `gsub(" ", "", var)`        | Remove characters from a string.             |
 | FIND           | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
 | INDEX          | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
@@ -90,27 +90,27 @@ Python includes [date, time, datetime and timedelta](https://docs.python.org/3/l
 | DAY            | `date(time).day`          | `day(val)`                  | Day of Month.                                |
 | HOUR           | `(date)time.hour`         | `hour(val)`                 | Hour of (date)time.                          |
 | INPUT          | `datetime.strptime()`     | `as.Date(val)`              | Convert string to Date.                      |
-| INTCK          |                           | `difftime()`                | Count of interval differences between dates. |
-| INTNX          |                           |                             | Increment a date by a count of intervals.    |
+| INTCK          | `relativedelta()`         | `difftime()`                | Count of interval differences between dates. |
+| INTNX          | `relativedelta()`         |                             | Increment a date by a count of intervals.    |
 | MINUTE         | `(date)time.minute`       | `minute(val)`               | Minute of (date)time.                        |
 | MONTH          | `date(time).month`        | `month(val)`                | Month of a given date.                       |
 | PUT            | `date(time).strftime()`   | `format(val, "%d%b%Y")`     | Convert to a string.                         |
-| QTR            | `date(time).month//4+1`   | `quarters(val)`             | Quarter of the year.                         |
+| QTR            | `date(time).month//3+1`   | `quarters(val)`             | Quarter of the year.                         |
 | SECOND         | `(date)time.second`       | `second(val)`               | Second of (date)time.                        |
-| TIME           | `time(datetime.now())`    |                             | Current time.                                |
+| TIME           | `datetime.time(datetime.now())` |                       | Current time.                                |
 | TIMEPART       | `datetime.time()`         |                             | Time component of datetime.                  |
 | TODAY          | `date.today()`            | `Sys.Date()`                | Current date.                                |
-| WEEK           |                           | `week(val)`                 | Week of the year.                            |
+| WEEK           | `isocalendar()[1]`        | `week(val)`                 | Week of the year.                            |
 | WEEKDAY        | `date(time).weekday()`    | `weekdays(val)`             | Day of week (different basis by language).   |
 | YEAR           | `date(time).year`         | `year(val)`                 | Year of the date.                            |
-| YRDIF          |                           |                             |                                              |
+| YRDIF          | `relativedelta()`         |                             | Years between two dates.                     |
 
 * Python functions marked `date(time)` indicate they work with both `date` and `datetime` data types.
 * Python functions marked `(date)time` indicate they work with both `datetime` and `time` data types.
 * R examples above require the `library(lubridate)`.
 * R supports dates in the `seq` function which can produce useful sequences, such as the following examples:
-  * seq(as.Date('2017-06-01'),by='days',length=30)
-  * seq(as.Date('2017-01-01'),to=as.Date('2017-01-01'),by='2 weeks')
+  * `seq(as.Date('2017-06-01'),by='days',length=30)`
+  * `seq(as.Date('2017-01-01'),to=as.Date('2017-01-01'),by='2 weeks')`
 
 
 ### Miscellaneous Functions

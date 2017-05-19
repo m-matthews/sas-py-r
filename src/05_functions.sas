@@ -39,7 +39,7 @@ data _null_;
   put "STRIP: " result $char.;
   result = translate(words, "?", "l");
   put "TRANSLATE: " result;
-  result = tranwrd(words, "Earth", "World");
+  result = tranwrd(words, "World", "Earth");
   put "TRANWRD: " result;
   result = trim("  Hello World  ");
   put "TRIM: " result $char.;
@@ -64,7 +64,7 @@ REPEAT: zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 SCAN: World
 STRIP: Hello World
 TRANSLATE: He??o Wor?d
-TRANWRD: Hello World
+TRANWRD: Hello Earth
 TRIM:   Hello World
 UPCASE: HELLO WORLD
 */
@@ -188,7 +188,7 @@ data _null_;
   result = intck('MONTHS','12FEB2016'd,'6FEB2017'd);
   put "INTCK: " result;
   result = intnx('MONTH','12FEB2016'd,12);
-  put "INTCK: " result date9.;
+  put "INTNX: " result date9.;
   result = minute(t);
   put "MINUTE: " result;
   result = month(d);
@@ -222,7 +222,7 @@ DAY: 11
 HOUR: 7
 INPUT: 28FEB2017
 INTCK: 12
-INTCK: 01FEB2017
+INTNX: 01FEB2017
 MINUTE: 32
 MONTH: 5
 PUT: 2017/05/11
