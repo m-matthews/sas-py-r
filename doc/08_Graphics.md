@@ -5,6 +5,9 @@
 [python_plot]: ../images/08_python_plot.png "Python Plot"
 [python_chart]: ../images/08_python_chart.png "Python Bar Chart"
 [python_surface]: ../images/08_python_surface.png "Python Surface"
+[r_plot]: ../images/08_r_plot.png "R Plot"
+[r_chart]: ../images/08_r_chart.png "R Bar Chart"
+[r_surface]: ../images/08_r_surface.png "R Surface"
 
 
 ## Graphics
