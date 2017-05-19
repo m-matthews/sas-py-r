@@ -110,6 +110,35 @@ R:
 SAS/GRAPH procedures are discussed in section [08. Graphics](08_Graphics.md).
 
 
+### PROC PRINTTO
+
+PROC PRINTTO diverts all output to the specified file.
+
+Note that Python and R both have functions which enable you to write to specific files without this global change.
+
+Python:
+
+```python
+    import sys
+    # Redirect output.
+    orig_stdout = sys.stdout
+    sys.stdout = open("file.txt", "w")
+    print("Hello World")
+    # Stop redirection.
+    sys.stdout = orig_stdout
+```
+
+R:
+
+```r
+    # Redirect output.
+    sink("file.txt")
+    print("Hello World")
+    # Stop redirection.
+    sink()
+```
+
+
 ### PROC SORT
 
 PROC SORT is used to sort SAS Datasets.  Python and R have methods for sorting data, however it is worth considering how the other languages process data.  Often the sorting process required with SAS is not required in Python or R.
