@@ -79,3 +79,7 @@ print("YRDIF: ", relativedelta(d2, d1).years)
 # ----------------------
 # User Defined Functions
 # ----------------------
+def mysum(val1, val2):
+    return val1 + val2
+
+print("MYSUM: ", mysum(18, 24))

@@ -132,7 +132,20 @@ Traditional SAS programming has involved the use of SAS Macros to simulate user 
 
 Python and R both include the creation of functions and classes.
 
-...
+Python:
+
+```python
+def mysum(val1, val2):
+    return val1 + val2
+```
+
+R:
+
+```r
+mysum <- function(val1, val2) {
+  return(val1 + val2)
+}
+```
 
 ---
 

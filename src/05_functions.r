@@ -76,3 +76,8 @@ print(paste("YRDIF:", (d1 %--% d2) %/% years(1) ))
 # ----------------------
 # User Defined Functions
 # ----------------------
+mysum <- function(val1, val2) {
+  return(val1 + val2)
+}
+
+print(paste("MYSUM: ", mysum(18, 24)))
