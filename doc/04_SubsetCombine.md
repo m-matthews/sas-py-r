@@ -104,4 +104,4 @@ merged_left <- merge(policies, claims, by="policy", all.x=TRUE)
 
 | Previous       |                | Next           |
 |:-------------- |:--------------:| --------------:|
-| [&lt;&lt; 03. Program Flow](04_ProgramFlow.md) | [Table of Contents](00_TOC.md) | [05. Functions &gt;&gt;](05_Functions.md) |
+| [&lt;&lt; 03. Program Flow](03_ProgramFlow.md) | [Table of Contents](00_TOC.md) | [05. Functions &gt;&gt;](05_Functions.md) |
