@@ -23,6 +23,11 @@ The following table provides comparisons between the different languages.  Note 
 | Processing   | Disk          | Memory           | Memory      |
 | Row Limits   | ~9.2 x 10<sup>18</sup>  | Memory           | Memory      |
 
+SAS, Python and R also work with the [Jupyter Notebook](https://jupyter.org/) collaboration tool.
+
+- [Python Jupyter Notebook Example](../src/01_introduction_python.ipynb)
+- [R Jupyter Notebook Example](../src/01_introduction_r.ipynb)
+
 Processing with SAS occurs on disk with SAS datasets (RAM disks or newer technologies such as
 SAS HPA can use memory).  Python and R processing is usually performed with data in memory and
 can therefore be faster, however may be limited due to memory availability.
