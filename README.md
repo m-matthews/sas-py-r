@@ -20,4 +20,4 @@ The documentation and sample programs assume the following software is available
 
 | Previous       |                | Next           |
 | -------------- |:--------------:| -------------- |
-| | [Table of Contents](00_TOC.md) | [01. Introduction &gt;&gt;](doc/01_Introduction.md) |
+| | [Table of Contents](doc/00_TOC.md) | [01. Introduction &gt;&gt;](doc/01_Introduction.md) |
