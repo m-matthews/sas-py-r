@@ -17,6 +17,8 @@ data _null_;
   put "COMPBL: " result;
   resultn = find(words,"World");
   put "FIND: " resultn;
+  result = ifc(1<2, "Correct", "Incorrect");
+  put "IFC: " result;
   resultn = index(words,"World");
   put "INDEX: " resultn;
   resultn = input("42", 9.);
@@ -53,6 +55,7 @@ CATX: Hello,World
 CHAR: H
 COMPBL: Hello World with lots of space
 FIND: 7
+IFC: Correct
 INDEX: 7
 INPUT: 42
 LEFT: Hello World

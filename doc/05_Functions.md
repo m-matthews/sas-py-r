@@ -18,6 +18,7 @@ Full example programs are available for each language in the files [05_functions
 | COMPRESS       | `translate()`             | `gsub(" ", "", var)`        | Remove characters from a string.             |
 | FIND           | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
 | INDEX          | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
+| IFC/IFN        | `val1 if cond else val2`  | `ifelse(cond, val1, val2)`  | Inline IF THEN ELSE.                         |
 | INPUT          | `int(var)` / `float(var)` | `as.integer` / `as.numeric` | Convert argument to numeric.                 |
 | LEFT           | `var.lstrip()`            | `trimws(val, 'left')`       | Remove leading whitespace.                   |
 | LENGTH         | `len(var)`                | `nchar(var)`                | Length of the string.                        |
