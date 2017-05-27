@@ -29,15 +29,15 @@ The following example programs subset the `policies` data into new tables `polun
 Python:
 
 ```python
-polunder25 <- policies[age<25]
-pol25plus <- policies[age>=25]
+polunder25 = policies[policies["age"]<25]
+pol25plus = policies[policies["age"]>=25]
 ```
 
 R:
 
 ```r
-polunder25 = policies[policies["age"]<25]
-pol25plus = policies[policies["age"]>=25]
+polunder25 <- policies[age<25]
+pol25plus <- policies[age>=25]
 ```
 
 ### Subsetting columns (KEEP)
