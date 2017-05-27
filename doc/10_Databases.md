@@ -14,7 +14,44 @@ requirements of row-by-row inserts).
 
 Both reading and writing performance may be improved by reviewing default buffer and cache sizes.
 
-...
+## Supported Databases
+
+Python and R have an extensive list of libraries to support most database vendors.  This documentation covers PostgreSQL and SQLite.
+
+## PostgreSQL
+
+The following examples use the Python [SQLAlchemy](https://www.sqlalchemy.org/) and R RPostgreSQL libraries for performing an SQL `SELECT` into Python's Pandas DataFrame and R's data.table structures.
+
+Full example programs are available for each language in the files [10_databases.py](../src/10_databases.py) and [10_databases.r](../src/10_databases.r).
+
+Python:
+
+```python
+from sqlalchemy import create_engine
+
+# Create the connection to the database.
+engine = create_engine('postgresql://pguser:pgpass@localhost:5432/postgres')
+
+# Create a pandas dataframe from a query.
+table = pd.read_sql_query('SELECT * FROM public.test_table', con=engine)
+```
+
+R:
+
+```r
+library(RPostgreSQL)
+
+# Create the connection to the database.
+con <- dbConnect(dbDriver("PostgreSQL"), host="localhost", port=5432, dbname="postgres",
+                 user="pguser", password="pgpass")
+
+# Create a data.table from a query.
+table <- as.data.table(dbGetQuery(con, "SELECT * FROM public.test_table"))
+
+# Disconnect from the database.
+dbDisconnect(con)
+```
+
 
 ---
 
