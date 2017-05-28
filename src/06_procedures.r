@@ -4,8 +4,8 @@ library(psych)
 setwd("~/sas-py-r/src")
 
 # Import data produced with 'random.py'.
-dtpolicies <- data.table(read.csv("../data/policies.csv"));
-dtclaims <- data.table(read.csv("../data/claims.csv"));
+dtpolicies <- data.table(read.csv("../data/policies.csv"))
+dtclaims <- data.table(read.csv("../data/claims.csv"))
 
 # Split data into under 25 and others using WHERE clauses.
 dtunder25 <- dtpolicies[age<25]

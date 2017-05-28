@@ -45,7 +45,7 @@ print(paste("PI:", pi ))
 # ------------------
 d <- Sys.Date()
 print(paste("DATE:", d ))
-dt <- Sys.time();
+dt <- Sys.time()
 print(paste("DATETIME:", dt ))
 t <- dt - floor_date(dt, unit='days')
 print(paste("TIME:", format(t) ))

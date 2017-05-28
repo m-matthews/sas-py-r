@@ -3,8 +3,8 @@ library(data.table)
 setwd("~/sas-py-r/src")
 
 # Import data produced with 'random.py'.
-policies <- data.table(read.csv("../data/policies.csv"));
-claims <- data.table(read.csv("../data/claims.csv"));
+policies <- data.table(read.csv("../data/policies.csv"))
+claims <- data.table(read.csv("../data/claims.csv"))
 
 # -----------------------
 # Subsetting rows (WHERE)
