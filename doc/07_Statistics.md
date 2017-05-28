@@ -20,6 +20,7 @@ Useful libraries include:
 
 Useful libraries include:
 
+- [stats](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html) - included in the base install.  [Additional Reference](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#Statistical-models-in-R).
 - [caret](http://topepo.github.io/caret/index.html) - classification and regression training.
 - [tensorflow](https://cran.r-project.org/web/packages/tensorflow/index.html) - tensorflow access library.  Note that Tensorflow itself [supports different languages](https://www.tensorflow.org/api_docs/), however R is not part of the core development.
 
