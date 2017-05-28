@@ -52,10 +52,10 @@ Python:
 
 ```python
 for i in range(10):
-    print(i)
+    print(i) # Output is 0, 1, 2, ... 8, 9
 
 for i in range(3, 8, 2):
-    print(i)
+    print(i) # Output is 3, 5, 7
 
 for w in ("Hello", "World"):
     print(w)
@@ -73,11 +73,11 @@ R:
 
 ```r
 for (i in seq(10)) {
-  print(i)
+  print(i) # Output is 1, 2, 3, ... 9, 10
 }
 
 for (i in seq(3, 7, 2)) {
-  print(i)
+  print(i) # Output is 3, 5, 7
 }
 
 for (w in c("Hello", "World")) {
