@@ -44,6 +44,10 @@ There will often be multiple libraries that can provide similar functionality.
 | Statistics      | SAS/STAT                     | Many               | Many               |
 | Web Services    | SAS/Integration Technologies | Many (eg: Flask)   | Many (eg: Shiny)   |
 
+Both Python and R can read SAS datasets:
+- Python using [Pandas read_sas](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_sas.html)
+- R using [haven read_sas](https://cran.r-project.org/web/packages/haven/haven.pdf)
+
 ## SAS
 
 Programs can be executed from within the SAS Display Manager, Enterprise Guide or alternatively from the command line:
