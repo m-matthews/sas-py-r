@@ -9,6 +9,7 @@ The majority of content and code in this repository compare traditional SAS deve
 It should be noted that this is not a comprehensive coverage of any of the languages, but can assist in
 understanding the corresponding capabilities and functionality.
 
+
 ## Comparison
 
 The following table provides comparisons between the different languages.  Note that the SAS examples are considering the more traditional use of SAS with Data Steps and Proc Steps.
@@ -16,7 +17,7 @@ The following table provides comparisons between the different languages.  Note 
 |              | SAS           | Python           | R           |
 | ------------ | ------------- | ---------------- | ----------- |
 | Introduced   | 1976          | 1991             | 1993        |
-| IDE          | Display Manager <br/> Enterprise Guide | Anaconda <br/> Spyder | R Studio |
+| IDE          | Display Manager <br/> Enterprise Guide | Spyder | R Studio |
 | Extension    | *.sas         | *.py             | *.r         |
 | License      | Proprietary   | Open Source      | Open Source |
 | Developed In | C / C++ / SAS | C / C++ / Python | C / C++ / R |
@@ -45,8 +46,10 @@ There will often be multiple libraries that can provide similar functionality.
 | Web Services    | SAS/Integration Technologies | Many (eg: Flask)   | Many (eg: Shiny)   |
 
 Both Python and R can read SAS datasets:
+
 - Python using [Pandas read_sas](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_sas.html)
 - R using [haven read_sas](https://cran.r-project.org/web/packages/haven/haven.pdf)
+
 
 ## SAS
 
@@ -58,6 +61,7 @@ Programs can be executed from within the SAS Display Manager, Enterprise Guide o
 
 Note that the above sample is included in this repository's [Source](../src) folder.
 
+
 ## Python
 
 The [Python](https://www.python.org/) language is becoming more popular amongst analysts and data scientists.  Programs can be executed from with an IDE (Integrated Development Environment) such as Spyder, or alternatively from the command line:
@@ -68,9 +72,11 @@ The [Python](https://www.python.org/) language is becoming more popular amongst 
 
 Note that the above sample is included in this repository's [Source](../src) folder.
 
+
 ### Python Installation
 
 Python can be installed via many methods; one popular method is with [Anaconda](https://www.continuum.io/downloads).
+
 
 ## R
 
@@ -82,9 +88,30 @@ Programs can be executed from with an IDE (Integrated Development Environment) s
 
 Note that the above sample is included in this repository's [Source](../src) folder.
 
+
 ### R Installation
 
 R can be installed via many methods; one popular method is to install it with [RStudio](https://www.rstudio.com/products/rstudio/download/)
+
+
+## Help
+
+All IDEs include help functionality, and [Google](https://google.com) search and [stackoverflow](https://stackoverflow.com/) provide feedback where someone has usually asked your question already.
+
+The language consoles for Python and R also have additional help functionality.
+
+Python:
+
+```python
+help(min)
+```
+
+R:
+
+```
+help("min")
+example("min")
+```
 
 ---
 
