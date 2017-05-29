@@ -43,9 +43,9 @@ Python also includes list comprehensions, which enable efficient operations on l
 ```python
     x = [1, 2, 3, 4]
     # Double the value for each entry in the list.
-    print([a*2 for a in x]) # Output is [2, 4, 6, 8]
+    y = [a*2 for a in x]  # y is [2, 4, 6, 8]
     # Double the value for each entry in the list where the value <= 2.
-    print([a*2 for a in x if a<=2]) # Output is [2, 4]
+    z = [a*2 for a in x if a<=2]  # z is [2, 4]
 ```
 
 The [numpy](http://www.numpy.org/) library includes additional array data types and also functions to perform complex operations.
@@ -53,10 +53,10 @@ The [numpy](http://www.numpy.org/) library includes additional array data types 
 ```python
     x = [1, 2, 3, 4]
     # Try to use multiplication on the list.
-    print(x*2) # Output is [1, 2, 3, 4, 1, 2, 3, 4]
+    y = x*2  # y is [1, 2, 3, 4, 1, 2, 3, 4]
     # Use numpy for multiplication.
     import numpy as np
-    print(np.asarray(x)*2) # Output is array([2, 4, 6, 8])
+    z = np.asarray(x)*2  # z is array([2, 4, 6, 8])
 ```
 
 
@@ -68,7 +68,7 @@ Array like functionality can be created in R using the `c` function.
 ```r
     x <- c(1, 2, 3, 4)
     # Double the value for each entry in the list.
-    print(x*2) # Output is 2 4 6 8
+    y <- x*2  # y is 2 4 6 8
 ```
 
 
