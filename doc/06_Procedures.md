@@ -16,15 +16,15 @@ PROC APPEND is used to concatenate two SAS datasets together.  This can also be 
 Python:
 
 ```python
-    # Use concat() for a list of dataframes to append, or append() to add one new.
-    dfnew = pd.concat([df1, df2, ... dfn])
-    dfnew = df1.append(df2)
+# Use concat() for a list of dataframes to append, or append() to add one new.
+dfnew = pd.concat([df1, df2, ... dfn])
+dfnew = df1.append(df2)
 ```
 
 R:
 
 ```r
-    dtnew <- rbind(dt1, dt2)
+dtnew <- rbind(dt1, dt2)
 ```
 
 
@@ -37,14 +37,14 @@ Note that the Spyder and RStudio IDEs have a listing of current data in the envi
 Python:
 
 ```python
-    # List column names
-    list(df1.columns.values)
+# List column names
+list(df1.columns.values)
 ```
 
 R:
 ```r
-    # List column names
-    colnames(df1)
+# List column names
+colnames(df1)
 ```
 
 
@@ -57,18 +57,18 @@ Note that the Spyder and RStudio IDEs have a listing of current data in the envi
 Python:
 
 ```python
-    # Remove an object
-    del mytable
-    # List of Pandas DataFrames
-    dfs = [k for (k, v) in locals().items() if type(v) == pd.DataFrame]
+# Remove an object
+del mytable
+# List of Pandas DataFrames
+dfs = [k for (k, v) in locals().items() if type(v) == pd.DataFrame]
 ```
 
 R:
 ```r
-    # Remove an object
-    rm(mytable)
-    # List all objects
-    ls()
+# Remove an object
+rm(mytable)
+# List all objects
+ls()
 ```
 
 
@@ -79,15 +79,15 @@ Python and R support the creation of custom functions as part of their base func
 Python:
 
 ```python
-    def mysum(val1, val2):
-        return val1 + val2
+def mysum(val1, val2):
+    return val1 + val2
 ```
 
 R:
 ```r
-    mysum <- function(val1, val2) {
-      return(val1 + val2)
-    }
+mysum <- function(val1, val2) {
+  return(val1 + val2)
+}
 ```
 
 
@@ -96,13 +96,13 @@ R:
 Python:
 
 ```python
-    df.groupby(['classvar'])['classvar'].count().to_frame()
+df.groupby(['classvar'])['classvar'].count().to_frame()
 ```
 
 R:
 
 ```r
-    dt[,.N,classvar]
+dt[,.N,classvar]
 ```
 
 
@@ -119,23 +119,23 @@ Note that Python and R both have functions which enable you to write to specific
 Python:
 
 ```python
-    import sys
-    # Redirect output.
-    orig_stdout = sys.stdout
-    sys.stdout = open("file.txt", "w")
-    print("Hello World")
-    # Stop redirection.
-    sys.stdout = orig_stdout
+import sys
+# Redirect output.
+orig_stdout = sys.stdout
+sys.stdout = open("file.txt", "w")
+print("Hello World")
+# Stop redirection.
+sys.stdout = orig_stdout
 ```
 
 R:
 
 ```r
-    # Redirect output.
-    sink("file.txt")
-    print("Hello World")
-    # Stop redirection.
-    sink()
+# Redirect output.
+sink("file.txt")
+print("Hello World")
+# Stop redirection.
+sink()
 ```
 
 
@@ -146,13 +146,13 @@ PROC SORT is used to sort SAS Datasets.  Python and R have methods for sorting d
 Python:
 
 ```python
-    df_sorted = dfpolicies.sort_values(by=['make', 'age'], ascending=[0, 1])
+df_sorted = dfpolicies.sort_values(by=['make', 'age'], ascending=[0, 1])
 ```
 
 R:
 
 ```r
-    dtsorted <- dtpolicies[order(make, age)]
+dtsorted <- dtpolicies[order(make, age)]
 ```
 
 
@@ -161,13 +161,13 @@ R:
 Python:
 
 ```python
-    df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
+df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
 ```
 
 R:
 
 ```r
-    dtsummary1 <- dtpolicies[,mean(age),make]
+dtsummary1 <- dtpolicies[,mean(age),make]
 ```
 
 
@@ -178,12 +178,12 @@ The SAS TRANSPOSE procedure is used to pivot tables.
 SAS:
 
 ```sas
-    proc transpose data=work.pol_state_make
-                   out=work.transposed(drop=_name_ _label_);
-      by state;
-      id make;
-      var count;
-   run;
+proc transpose data=work.pol_state_make
+               out=work.transposed(drop=_name_ _label_);
+  by state;
+  id make;
+  var count;
+run;
 ```
 
 Python:
@@ -195,8 +195,8 @@ Python:
 R:
 
 ```r
-    dtpol_state_make <- dtpolicies[,mean(age),list(state,make)]
-    dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "make")), state ~ make)
+dtpol_state_make <- dtpolicies[,mean(age),list(state,make)]
+dttransposed <- dcast.data.table(melt(dtpol_state_make, id.vars = c("state", "make")), state ~ make)
 ```
 
 ---
