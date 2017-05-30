@@ -4,6 +4,8 @@
 
 The following lists of functions are provided in order by SAS Function name, as this document is designed with that perspective.
 
+The other languages do not always match the exact same functionality, however are used as a starting point.  For example, the WEEKDAY equivalent functions do not all provide the same value for Monday, and the first character of a Python string is position `0`.
+
 Full example programs are available for each language in the files [05_functions.sas](../src/05_functions.sas), [05_functions.py](../src/05_functions.py) and [05_functions.r](../src/05_functions.r).
 
 
@@ -11,30 +13,30 @@ Full example programs are available for each language in the files [05_functions
 
 | SAS Function   | Python                    | R                           | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
-| CAT            | `"".join(vars)`           | `paste(vars, collapse='')`  | Add strings together.                        |
-| CATX           | `",".join(vars)`          | `paste(vars, collapse=',')` | Add strings with delimiters.                 |
-| CHAR           | `var[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
-| COMPBL         | `" ".join(var.split())`   | `gsub("\\s+", " ", var)`    | Remove multiple spaces from a string.        |
-| COMPRESS       | `translate()`             | `gsub(" ", "", var)`        | Remove characters from a string.             |
-| FIND           | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
-| INDEX          | `var.find()`              | `regexpr(pattern, var)[1]`  | Find a substring within a string.            |
+| CAT            | `"".join(vals)`           | `paste(vals, collapse='')`  | Add strings together.                        |
+| CATX           | `",".join(vals)`          | `paste(vals, collapse=',')` | Add strings with delimiters.                 |
+| CHAR           | `val[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
+| COMPBL         | `" ".join(val.split())`   | `gsub("\\s+", " ", val)`    | Remove multiple spaces from a string.        |
+| COMPRESS       | `translate()`             | `gsub(" ", "", val)`        | Remove characters from a string.             |
+| FIND           | `val.find()`              | `regexpr(pattern, val)[1]`  | Find a substring within a string.            |
+| INDEX          | `val.find()`              | `regexpr(pattern, val)[1]`  | Find a substring within a string.            |
 | IFC/IFN        | `val1 if cond else val2`  | `ifelse(cond, val1, val2)`  | Inline IF THEN ELSE.                         |
-| INPUT          | `int(var)` / `float(var)` | `as.integer` / `as.numeric` | Convert argument to numeric.                 |
-| LEFT           | `var.lstrip()`            | `trimws(val, 'left')`       | Remove leading whitespace.                   |
-| LENGTH         | `len(var)`                | `nchar(var)`                | Length of the string.                        |
-| LOWCASE        | `var.lower()`             | `tolower()`                 | Lower case version of a string.              |
-| MISSING        | `var is None or var==''`  | `var == ''`                 | Is a string missing / empty.                 |
+| INPUT          | `int(val)` / `float(val)` | `as.integer` / `as.numeric` | Convert argument to numeric.                 |
+| LEFT           | `val.lstrip()`            | `trimws(val, 'left')`       | Remove leading whitespace.                   |
+| LENGTH         | `len(val)`                | `nchar(val)`                | Length of the string.                        |
+| LOWCASE        | `val.lower()`             | `tolower(val)`              | Lower case version of a string.              |
+| MISSING        | `val is None or var==''`  | `val == ''`                 | Is a string missing / empty.                 |
 | PUT            | `str(val)`                | `as.character(...)`         | Convert argument to string.                  |
-| QUOTE          | `'"{}"'.format(var)`      | `paste('"', var, '"')`      | Quote a string.                              |
+| QUOTE          | `'"{}"'.format(val)`      | `paste('"', val, '"')`      | Quote a string.                              |
 | REPEAT         | `'c'*n`                   | `paste(rep('c', n), collapse='')` | Repeat a char/string to build a new string. |
-| REVERSE        | `var[::-1]`               | `paste(rev(strsplit(val, NULL)[[1]]), collapse='')` | Reverse the string.  |
-| SCAN           | `var.split(delim)`        | `strsplit(val,delim)`       | Scan for a word (others produce word lists). |
-| STRIP          | `var.strip()`             | `trimws(val, 'both')`       | Remove leading and trailing whitespace.      |
-| SUBSTR         | `var[start:len]`          | `substr(val,start,stop)`    | Substring.                                   |
-| TRANSLATE      | `var.replace()`           | `gsub()`                    | Replace text in a string.                    |
-| TRANWRD        | `var.replace()`           | `gsub()`                    | Replace words in a string.                   |
-| TRIM           | `var.rstrip()`            | `trimws(val, 'right')`      | Remove trailing whitespace.                  |
-| UPCASE         | `var.upper()`             | `toupper()`                 | Upper case value of string.                  |
+| REVERSE        | `val[::-1]`               | `paste(rev(strsplit(val, NULL)[[1]]), collapse='')` | Reverse the string.  |
+| SCAN           | `val.split(delim)`        | `strsplit(val,delim)`       | Scan for a word (others produce word lists). |
+| STRIP          | `val.strip()`             | `trimws(val, 'both')`       | Remove leading and trailing whitespace.      |
+| SUBSTR         | `val[start:len]`          | `substr(val,start,stop)`    | Substring.                                   |
+| TRANSLATE      | `val.replace()`           | `gsub()`                    | Replace text in a string.                    |
+| TRANWRD        | `val.replace()`           | `gsub()`                    | Replace words in a string.                   |
+| TRIM           | `val.rstrip()`            | `trimws(val, 'right')`      | Remove trailing whitespace.                  |
+| UPCASE         | `val.upper()`             | `toupper(val)`              | Upper case value of string.                  |
 
 Note that SAS Data Step character variables have a fixed length, and are normally padded with spaces to fill a given string.  This differs from other languages.
 
@@ -53,10 +55,10 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 | MAX            | `max(vals)`               | `max(vals)`                 | Maximum value of inputs.                     |
 | MEAN           | `statistics.mean(vals)`   | `mean(vals)`                | Average value of inputs.                     |
 | MIN            | `min(vals)`               | `min(vals)`                 | Minimum value of inputs.                     |
-| MISSING        | `var in None or math.isnan(var)` | `is.nan(var)`        | Is the value mising / not a number.          |
+| MISSING        | `val in None or math.isnan(var)` | `is.nan(val)`        | Is the value mising / not a number.          |
 | MOD            | `val1 % val2`             | `val1 %% val2`              | Modulo.                                      |
-| N              |                           |                             | Number of non-missing values in a list.      |
-| NMISS          |                           |                             | Number of missing values in a list.          |
+| N              | `vals.size - np.isnan(vals).sum()` | `length(vals) - sum(is.nan(vals))` | Number of non-missing values in a list.      |
+| NMISS          | `np.isnan(vals).sum()`    | `sum(is.nan(vals))`         | Number of missing values in a list.          |
 | RANGE          | `max(vals)-min(vals)`     | `range(vals)`               | Range of values.                             |
 | RANUNI         | `random.random()`         | `runif()`                   | Random number.                               |
 | ROUND          | `round(val, digits)`      | `round(val, digits)`        | Round a number.                              |
@@ -114,7 +116,7 @@ Python includes [date, time, datetime and timedelta](https://docs.python.org/3/l
 * R examples above require the `library(lubridate)`.
 * R supports dates in the `seq` function which can produce useful sequences, such as the following examples:
   * `seq(as.Date('2017-06-01'),by='days',length=30)`
-  * `seq(as.Date('2017-01-01'),to=as.Date('2017-01-01'),by='2 weeks')`
+  * `seq(as.Date('2017-01-01'),to=as.Date('2017-06-01'),by='2 weeks')`
 
 
 ### Miscellaneous Functions
