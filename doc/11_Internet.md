@@ -37,6 +37,12 @@ r = fromJSON("https://api.github.com/users/m-matthews")
 print(paste("Name:", r["name"], "Location:", r["location"]))
 ```
 
+
+## Web Applications
+
+It is also possible to write full web applications using a number of libraries, for example Python's [Flask](http://flask.pocoo.org/) and R's [Shiny](https://www.rstudio.com/products/shiny/).
+
+
 ---
 
 | Previous       |                | Next           |
