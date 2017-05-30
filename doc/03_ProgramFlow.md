@@ -52,32 +52,32 @@ Python:
 
 ```python
 for i in range(10):
-    print(i) # Output is 0, 1, 2, ... 8, 9
+    print(i)  # Output is 0, 1, 2, ... 8, 9
 
-for i in range(3, 8, 2):
-    print(i) # Output is 3, 5, 7
+for i in range(3, 9, 2):
+    print(i)  # Output is 3, 5, 7
 
 for w in ("Hello", "World"):
     print(w)
 
-# Multiple variables in the constant list (i=21, 42, w="Hello", "World").
+# Multiple variables in the constant list.
 for i, w in ((21, "Hello"), (42, "World")):
-    print(i, w)
+    print(i, w)  # Output is 21 Hello, 42 World
 
 # Enumerate gives an ascending id to each iteration starting at 0.
 for i, w in enumerate(("Hello", "World")):
-    print(i, w)
+    print(i, w)  # Output is 0 Hello, 1 World
 ```
 
 R:
 
 ```r
 for (i in seq(10)) {
-  print(i) # Output is 1, 2, 3, ... 9, 10
+  print(i)  # Output is 1, 2, 3, ... 9, 10
 }
 
 for (i in seq(3, 7, 2)) {
-  print(i) # Output is 3, 5, 7
+  print(i)  # Output is 3, 5, 7
 }
 
 for (w in c("Hello", "World")) {
