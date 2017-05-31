@@ -33,6 +33,10 @@ print(paste("UPCASE:", toupper(words) ))
 # ----------------------
 # Mathematical Functions
 # ----------------------
+nums <- c(1, NaN, 3, NaN, 5)
+
+print(paste("N:", length(nums) - sum(is.nan(nums)) ))
+print(paste("NMISS:", sum(is.nan(nums)) ))
 
 # ----------------------
 # Mathematical Constants

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import math
+import numpy as np
 from datetime import date
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
@@ -36,6 +37,10 @@ print("UPCASE:", words.upper())
 # ----------------------
 # Mathematical Functions
 # ----------------------
+nums = np.asarray((1, math.nan, 3, math.nan, 5))
+
+print("N:", nums.size - np.isnan(nums).sum() )
+print("NMISS:", np.isnan(nums).sum() )
 
 # ----------------------
 # Mathematical Constants
