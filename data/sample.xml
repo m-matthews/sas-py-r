@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<data>
+  <characters>
+    <character>
+      <name>Arthur Dent</name>
+    </character>
+    <character>
+      <name>Marvin</name>
+    </character>
+    <character>
+      <name>Slartibartfast</name>
+    </character>
+    <character>
+      <name>Trillian</name>
+    </character>
+    <character>
+      <name>Zaphod Beeblebrox</name>
+    </character>
+  </characters>
+  <answer>42</answer>
+</data>
