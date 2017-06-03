@@ -1,5 +1,6 @@
 library(data.table)
 library(jsonlite)
+library(readxl)
 library(xml2)
 
 setwd("~/sas-py-r/src")
@@ -14,6 +15,11 @@ policies <- data.table(read.csv("../data/policies.csv"))
 # ----------
 jsondata <- fromJSON("../data/sample.json")
 print(paste("JSON:", jsondata))
+
+# ----------
+# XSLX Files
+# ----------
+characters <- data.table(read_excel("../data/sample.xlsx"))
 
 # ---------
 # XML Files

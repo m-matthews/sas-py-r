@@ -17,6 +17,11 @@ with open("../data/sample.json", 'r') as f:
     jsondata = json.load(f)
 print("JSON:", jsondata)
 
+# ----------
+# XLSX Files
+# ----------
+characters = pd.read_excel("../data/sample.xlsx")
+
 # ---------
 # XML Files
 # ---------

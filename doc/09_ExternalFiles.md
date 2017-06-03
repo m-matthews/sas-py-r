@@ -29,6 +29,8 @@ policies <- data.table(read.csv("../data/policies.csv"))
 Python:
 
 ```python
+import json
+
 with open("../data/sample.json", 'r') as f:
     jsondata = json.load(f)
 ```
@@ -36,7 +38,26 @@ with open("../data/sample.json", 'r') as f:
 R:
 
 ```r
+library(jsonlite)
+
 jsondata <- fromJSON("../data/sample.json")
+```
+
+
+### XLSX (Microsoft Excel)
+
+Python:
+
+```python
+characters = pd.read_excel("../data/sample.xlsx")
+```
+
+R:
+
+```r
+library(readxl)
+
+characters <- data.table(read_excel("../data/sample.xlsx"))
 ```
 
 
@@ -45,6 +66,8 @@ jsondata <- fromJSON("../data/sample.json")
 Python:
 
 ```python
+from xml.etree import ElementTree
+
 tree = ElementTree.parse("../data/sample.xml")
 for child in tree.getroot():
     for subchild in child.iter():
@@ -55,6 +78,8 @@ for child in tree.getroot():
 R:
 
 ```r
+library(xml2)
+
 xmldata <- read_xml("../data/sample.xml")
 xmlcharacters <- xml_text(xml_find_all(xmldata, "//character//name"))
 xmlanswer <- as.integer(xml_text(xml_find_all(xmldata, "//answer")))
