@@ -30,6 +30,7 @@ Full example programs are available for each language in the files [05_functions
 | QUOTE          | `'"{}"'.format(val)`      | `paste('"', val, '"')`      | Quote a string.                              |
 | REPEAT         | `'c'*n`                   | `paste(rep('c', n), collapse='')` | Repeat a char/string to build a new string. |
 | REVERSE        | `val[::-1]`               | `paste(rev(strsplit(val, NULL)[[1]]), collapse='')` | Reverse the string.  |
+| RXPARSE        | `re.compile()` / `match()` | `grep()`                   | Regular expressions.                         |
 | SCAN           | `val.split(delim)`        | `strsplit(val,delim)`       | Scan for a word (others produce word lists). |
 | STRIP          | `val.strip()`             | `trimws(val, 'both')`       | Remove leading and trailing whitespace.      |
 | SUBSTR         | `val[start:len]`          | `substr(val,start,stop)`    | Substring.                                   |
@@ -133,18 +134,28 @@ Python includes [date, time, datetime and timedelta](https://docs.python.org/3/l
 | URLENCODE      | `urllib.parse.quote()`    |                             | Escape URL characters.                       |
 | VTYPE          | `type()`                  | `class()`                   | Variable (object) type.                      |
 
+The following features are not functions, however useful for comparison.
+
+| SAS Feature    | Python                    | R                           | Description                                  |
+| -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
+| %INCLUDE       | `import`                  | `source(filename.R)`        | Include / execute code.                      |
+| &SYSPARM       | `sys.argv`                | `commandArgs()`             | Command line arguments.                      |
+
 
 ### User Defined Functions
 
 Traditional SAS programming has involved the use of SAS Macros to simulate user defined functions.  Newer releases of SAS Software include PROC FCMP which enables the creation of functions.
 
-Python and R both include the creation of functions and classes.
+Python and R both include the creation of functions and classes.  It is also possible to return more than a single value from a function.
 
 Python:
 
 ```python
 def mysum(val1, val2):
     return val1 + val2
+
+def twovals(val1, val2):
+    return val1 + 42, val2 + 42
 ```
 
 R:
@@ -152,6 +163,10 @@ R:
 ```r
 mysum <- function(val1, val2) {
   return(val1 + val2)
+}
+
+twovals <- function(val1, val2) {
+  return(list(val1 + 42, val2 + 42))
 }
 ```
 

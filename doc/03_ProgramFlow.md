@@ -16,10 +16,13 @@ Python:
 
 ```python
 if answer==42:
+    x = x+1
     print("Correct")
 elif answer<42:
+    x = x-1
     print("Too small")
 else:
+    x = x-1
     print("Too big")
 
 if word in ("Hello", "Goodbye"):
@@ -30,12 +33,15 @@ R:
 
 ```r
 if (answer==42) then {
+  x <- x+1
   print("Correct")
 }
 else if (answer<42) then {
+  x <- x-1
   print("Too small")
 }
 else {
+  x <- x-1
   print("Too big")
 }
 

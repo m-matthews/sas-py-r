@@ -21,6 +21,7 @@ types including date and timestamps.
 
 Example programs are available for each language [02_datatypes.py](../src/02_datatypes.py) and [02_datatypes.r](../src/02_datatypes.r).
 
+Note that with Python and R the data types for a variable are not fixed and can be assigned different types during program execution.
 
 ## Arrays
 

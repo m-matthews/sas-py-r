@@ -29,12 +29,12 @@ SAS, Python and R also work with the [Jupyter Notebook](https://jupyter.org/) co
 - [Python Jupyter Notebook Example](../src/01_introduction_python.ipynb)
 - [R Jupyter Notebook Example](../src/01_introduction_r.ipynb)
 
-Processing with SAS occurs on disk with SAS datasets (RAM disks or newer technologies such as
+Processing with SAS occurs on disk with SAS datasets (unless using the `memlib` option, RAM disks or newer technologies such as
 SAS HPA can use memory).  Python and R processing is usually performed with data in memory and
 can therefore be faster, however may be limited due to memory availability.
 
 SAS has the concept of products to provide additional functionality.
-Python and R have additional libraries of functions that can be used to give similar functionality.
+Python and R have additional libraries of functions that can be used to give similar functionality.  Some libraries are installed as part of the initial installation, others must be separately installed, and the version of each library must be considered.
 There will often be multiple libraries that can provide similar functionality.
 
 |                 | SAS                          | Python             | R                  |

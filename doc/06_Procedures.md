@@ -74,19 +74,27 @@ ls()
 
 ### PROC FCMP
 
-Python and R support the creation of custom functions as part of their base functionality.
+Python and R support the creation of custom functions as part of their base functionality.  It is also possible to return more than a single value from a function.
 
 Python:
 
 ```python
 def mysum(val1, val2):
     return val1 + val2
+
+def twovals(val1, val2):
+    return val1 + 42, val2 + 42
 ```
 
 R:
+
 ```r
 mysum <- function(val1, val2) {
   return(val1 + val2)
+}
+
+twovals <- function(val1, val2) {
+  return(list(val1 + 42, val2 + 42))
 }
 ```
 
