@@ -71,6 +71,10 @@ for i, w in ((21, "Hello"), (42, "World")):
 # Enumerate gives an ascending id to each iteration starting at 0.
 for i, w in enumerate(("Hello", "World")):
     print(i, w)  # Output is 0 Hello, 1 World
+
+import os
+for file in sorted(os.listdir("../doc")):
+    print(file)
 ```
 
 R:
@@ -86,6 +90,10 @@ for (i in seq(3, 7, 2)) {
 
 for (w in c("Hello", "World")) {
   print(w)
+}
+
+for (file in list.files("../doc")) {
+  print(file)
 }
 ```
 

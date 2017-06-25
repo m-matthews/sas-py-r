@@ -34,3 +34,7 @@ for i, w in ((21, "Hello"), (42, "World")):
 
 for i, w in enumerate(("Hello", "World")):
     print(i, w)
+
+import os
+for file in sorted(os.listdir("../doc")):
+    print(file)

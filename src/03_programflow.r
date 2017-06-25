@@ -32,3 +32,7 @@ for (i in seq(3, 7, 2)) {
 for (w in c("Hello", "World")) {
   print(w)
 }
+
+for (file in list.files("../doc")) {
+  print(file)
+}
