@@ -15,7 +15,7 @@ Full example programs are available for each language in the files [05_functions
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
 | CAT            | `"".join(vals)`           | `paste(vals, collapse='')`  | Add strings together.                        |
 | CATX           | `",".join(vals)`          | `paste(vals, collapse=',')` | Add strings with delimiters.                 |
-| CHAR           | `val[pos:1]`              | `substr(val,start,stop)`    | Single character from a string.              |
+| CHAR           | `val[pos]`                | `substr(val,start,stop)`    | Single character from a string.              |
 | COMPBL         | `" ".join(val.split())`   | `gsub("\\s+", " ", val)`    | Remove multiple spaces from a string.        |
 | COMPRESS       | `translate()`             | `gsub(" ", "", val)`        | Remove characters from a string.             |
 | FIND           | `val.find()`              | `regexpr(pattern, val)[1]`  | Find a substring within a string.            |
@@ -25,7 +25,7 @@ Full example programs are available for each language in the files [05_functions
 | LEFT           | `val.lstrip()`            | `trimws(val, 'left')`       | Remove leading whitespace.                   |
 | LENGTH         | `len(val)`                | `nchar(val)`                | Length of the string.                        |
 | LOWCASE        | `val.lower()`             | `tolower(val)`              | Lower case version of a string.              |
-| MISSING        | `val is None or var==''`  | `val == ''`                 | Is a string missing / empty.                 |
+| MISSING        | `val is None or val==''`  | `val == ''`                 | Is a string missing / empty.                 |
 | PUT            | `str(val)`                | `as.character(...)`         | Convert argument to string.                  |
 | QUOTE          | `'"{}"'.format(val)`      | `paste('"', val, '"')`      | Quote a string.                              |
 | REPEAT         | `'c'*n`                   | `paste(rep('c', n), collapse='')` | Repeat a char/string to build a new string. |
@@ -56,7 +56,7 @@ Note that SAS Data Step character variables have a fixed length, and are normall
 | MAX            | `max(vals)`               | `max(vals)`                 | Maximum value of inputs.                     |
 | MEAN           | `statistics.mean(vals)`   | `mean(vals)`                | Average value of inputs.                     |
 | MIN            | `min(vals)`               | `min(vals)`                 | Minimum value of inputs.                     |
-| MISSING        | `val in None or math.isnan(var)` | `is.nan(val)`        | Is the value mising / not a number.          |
+| MISSING        | `val in None or math.isnan(val)` | `is.nan(val)`        | Is the value mising / not a number.          |
 | MOD            | `val1 % val2`             | `val1 %% val2`              | Modulo.                                      |
 | N              | `vals.size - np.isnan(vals).sum()` | `length(vals) - sum(is.nan(vals))` | Number of non-missing values in a list.      |
 | NMISS          | `np.isnan(vals).sum()`    | `sum(is.nan(vals))`         | Number of missing values in a list.          |
@@ -125,7 +125,7 @@ Python includes [date, time, datetime and timedelta](https://docs.python.org/3/l
 | SAS Function   | Python                    | R                           | Description                                  |
 | -------------- | ------------------------- | --------------------------- | -------------------------------------------- |
 | SLEEP          | `time.sleep(secs)`        | `Sys.sleep(secs)`           | Pause program execution.                     |
-| SYSGET         | `os.environ(var)`         | `Sys.getenv()`              | Fetch value from environment variable.       |
+| SYSGET         | `os.environ(val)`         | `Sys.getenv(val)`           | Fetch value from environment variable.       |
 | SYSPROD        | `pip.get_installed_distributions()` | `installed.packages` | List installed products / modules.        |
 | SYSTEM         | `subprocess.run(cmd)`     | `shell(cmd)`                | Execute a system command.                    |
 | HTMLDECODE     | `html.unescape(str)`      |                             | Remove escape sequence from escaped HTML.    |
