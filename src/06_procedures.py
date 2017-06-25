@@ -57,5 +57,7 @@ df_summary1 = dfpolicies.groupby(['make'])['age'].mean().to_frame()
 # --------------
 # PROC TRANSPOSE
 # --------------
-
-
+df_transposed = dfpolicies.pivot_table(index=['state'], columns=['make'],
+                                       values=['policy'], aggfunc='count',
+                                       fill_value=0)
+df_transposed.columns = [make for (i, make) in df_transposed.columns.values]

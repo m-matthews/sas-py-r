@@ -197,8 +197,14 @@ run;
 Python:
 
 ```python
-
+dftransposed = dfpolicies.pivot_table(index=['state'], columns=['make'],
+                                      values=['policy'], aggfunc='count',
+                                      fill_value=0)
+# Fix column names if required
+dftransposed.columns = [make for (i, make) in df_transposed.columns.values]
 ```
+
+Pandas includes multiple methods for [reshaping](http://pandas.pydata.org/pandas-docs/stable/reshaping.html) dataframes.
 
 R:
 
