@@ -32,15 +32,13 @@ if word in ("Hello", "Goodbye"):
 R:
 
 ```r
-if (answer==42) then {
+if (answer==42) {
   x <- x+1
   print("Correct")
-}
-else if (answer<42) then {
+} else if (answer<42) {
   x <- x-1
   print("Too small")
-}
-else {
+} else {
   x <- x-1
   print("Too big")
 }

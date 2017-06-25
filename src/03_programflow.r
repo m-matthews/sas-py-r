@@ -6,13 +6,11 @@ word = "Hello"
 # ---------------------
 # Conditional Execution
 # ---------------------
-if (answer==42) then {
+if (answer==42) {
   print("Correct")
-}
-else if (answer<42) then {
+} else if (answer<42) {
   print("Too small")
-}
-else {
+} else {
   print("Too big")
 }
 
