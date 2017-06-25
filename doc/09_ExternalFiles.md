@@ -88,14 +88,41 @@ xmlanswer <- as.integer(xml_text(xml_find_all(xmldata, "//answer")))
 
 ### Unstructured
 
+The following example reads a [text file](../data/sample.txt) with a custom structure in both Python and R.
+
 Python:
 
 ```python
+with open("../data/sample.txt", 'r') as f:
+    for line in f.readlines():
+        if len(line)==0:
+            continue
+        elif line[0]!='-':
+            character = line.rstrip()
+        else:
+            line = line[2:].rstrip().split(',')
+            actor = line[0]
+            methods = [m.strip() for m in line[1:]]
+            print(character, "played by", actor, "in", " & ".join(methods))
 ```
 
 R:
 
 ```r
+lines <- readLines("../data/sample.txt")
+for (line in lines) {
+  if (length(line) == 0) {
+    continue
+  } else if (substr(line,0,1) != '-') {
+    character <- line
+  } else {
+    line <- strsplit(line, ",")[[1]]
+    actor <- line[1]
+    actor <- substr(actor, 3, nchar(actor))
+    methods <- line[2:length(line)]
+    print(paste(character, "played by", actor, "in", paste(methods, collapse=" &")))
+  }
+}
 ```
 
 
